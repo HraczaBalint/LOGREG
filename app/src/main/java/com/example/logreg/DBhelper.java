@@ -44,12 +44,12 @@ public class DBhelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void bejeletkezes(String felhasznalonev, String jelszo) {
+    public boolean bejeletkezes(String felhasznalonev, String jelszo) {
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues values = new ContentValues();
         values.get(felhasznalonev);
         values.get(jelszo);
-        //return ;
+        return true;
     }
 
     public boolean regisztracio(String email, String felhasznaloNev, String jelszo, String teljesNev) {
